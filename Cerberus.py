@@ -4,9 +4,6 @@ from bs4 import BeautifulSoup
 
 x = os.getlogin()
 
-file = open('THost.bat', 'a')
-file.close()
-
 path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage1.py")
 
 

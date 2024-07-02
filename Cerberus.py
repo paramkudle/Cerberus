@@ -2,8 +2,6 @@ import os.path
 import urllib.request
 from bs4 import BeautifulSoup
 
-x = os.getlogin()
-
 path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage1.py")
 
 

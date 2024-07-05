@@ -28,4 +28,16 @@ You can obfuscate and then compile `Cerberus.py` into a .exe by using a [.py to 
 
 Make sure to add a Anti-VM feature in your payload to avoid detection on VirusTotal.
 
+## To-Do:
+
+Arranged according to priority
+
+* Actually make a Good Example Payload
+* Implement Polymorphism
+* Make a Persisting Malware
+* Retrieve Code and Execute in Memory without Writing to Disk.
+* Anti-VM/Anti-Sandbox
+* Obfuscation (?)
+* Server-side encrypt the Code Randomly every 5 minutes with a Key (?)
+* Bytecode (?)
 

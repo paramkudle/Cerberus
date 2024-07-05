@@ -39,5 +39,4 @@ Arranged according to priority
 * Anti-VM/Anti-Sandbox
 * Obfuscation (?)
 * Server-side encrypt the Code Randomly every 5 minutes with a Key (?)
-* Bytecode (?)
 

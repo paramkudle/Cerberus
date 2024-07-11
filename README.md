@@ -13,6 +13,8 @@ The malicious code is divided into 3 stages in `TSource` files.
 
 There are 3 Stages divided in `StageSource` files. These files retrieve the code from seperate `TSource` files from seperate specified URLs and append it into a main payload file **part by part**. (Why?)
 
+If one stage of the malicious code is detected, the other stages won't be affected. 
+
 The 3 Stages can be put into `Cerberus.py`, yes, but this way it is detected almost always.
 
 The main file `Cerberus.py` retrieves the code for the first stage and starts the malware.  

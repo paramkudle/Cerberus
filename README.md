@@ -24,11 +24,11 @@ The main file `Cerberus.py` retrieves the code for the first stage and starts th
 
 You can divide the payload into more parts to avoid detection.
 
-One more way to evade detection is by obfuscating both the python files as well.
+One more way to evade detection is by obfuscating the python files as well.
 
 You can obfuscate and then compile `Cerberus.py` into a .exe by using a [.py to .exe converter.](https://pypi.org/project/auto-py-to-exe/)
 
-Make sure to add a Anti-VM feature in your payload to avoid detection on VirusTotal.
+Make sure to add a Anti-VM feature in your payload to avoid detection on VirusTotal. It is better this way than to add Anti-VM in `Stage` files to avoid the files themselves getting removed.
 
 ## To-Do:
 
@@ -38,7 +38,7 @@ Arranged according to priority
 * ~~Implement Polymorphism~~
 * Make a Persisting Malware
 * Retrieve Code and Execute in Memory without Writing to Disk.
-* Anti-VM/Anti-Sandbox
+* ~~Anti-VM/Anti-Sandbox~~
 * Obfuscation (?)
 * Server-side encrypt the Code Randomly every 5 minutes with a Key (?)
 

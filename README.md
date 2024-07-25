@@ -7,7 +7,7 @@ Whether or not you evade detection is purely based on your payload.
 
   
 
-## How does it work?
+## 🔨 How does it work?
 
 The malicious code is divided into 3 stages in `TSource` files.
 
@@ -20,7 +20,7 @@ The 3 Stages can be put into `Cerberus.py`, yes, but this way it is detected alm
 The main file `Cerberus.py` retrieves the code for the first stage and starts the malware.  
 
 
-## How to Improve
+## 🔧 How to Improve
 
 You can divide the payload into more parts to avoid detection.
 
@@ -30,7 +30,7 @@ You can obfuscate and then compile `Cerberus.py` into a .exe by using a [.py to 
 
 Make sure to add a Anti-VM feature in your payload to avoid detection on VirusTotal. It is better this way than to add Anti-VM in `Stage` files to avoid the files themselves getting removed.
 
-## To-Do:
+## 📝 To-Do:
 
 Arranged according to priority
 
